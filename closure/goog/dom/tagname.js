@@ -42,7 +42,6 @@ goog.dom.TagName = class {
     return /** @type {?} */ (name);
   }
 
-  /** @suppress {unusedPrivateMembers} */
   constructor() {
     /** @private {null} */
     this.googDomTagName_doNotImplementThisTypeOrElse_;
