@@ -105,6 +105,48 @@ goog.global.CLOSURE_DEFINES;
 
 
 /**
+ * Returns true if the specified value is not undefined.
+ *
+ * @param {?} val Variable to test.
+ * @return {boolean} Whether variable is defined.
+ */
+goog.isDef = function(val) {
+  // void 0 always evaluates to undefined and hence we do not need to depend on
+  // the definition of the global variable named 'undefined'.
+  return val !== void 0;
+};
+
+/**
+ * Returns true if the specified value is a string.
+ * @param {?} val Variable to test.
+ * @return {boolean} Whether variable is a string.
+ */
+goog.isString = function(val) {
+  return typeof val == 'string';
+};
+
+
+/**
+ * Returns true if the specified value is a boolean.
+ * @param {?} val Variable to test.
+ * @return {boolean} Whether variable is boolean.
+ */
+goog.isBoolean = function(val) {
+  return typeof val == 'boolean';
+};
+
+
+/**
+ * Returns true if the specified value is a number.
+ * @param {?} val Variable to test.
+ * @return {boolean} Whether variable is a number.
+ */
+goog.isNumber = function(val) {
+  return typeof val == 'number';
+};
+
+
+/**
  * Builds an object structure for the provided namespace path, ensuring that
  * names that already exist are not overwritten. For example:
  * "a.b.c" -> a = {};a.b={};a.b.c={};
@@ -1185,6 +1227,36 @@ goog.typeOf = function(value) {
     return 'array';
   }
   return s;
+};
+
+/**
+ * Returns true if the specified value is null.
+ * @param {?} val Variable to test.
+ * @return {boolean} Whether variable is null.
+ */
+goog.isNull = function(val) {
+  return val === null;
+};
+
+
+/**
+ * Returns true if the specified value is defined and not null.
+ * @param {?} val Variable to test.
+ * @return {boolean} Whether variable is defined and not null.
+ */
+goog.isDefAndNotNull = function(val) {
+  // Note that undefined == null.
+  return val != null;
+};
+
+
+/**
+ * Returns true if the specified value is an array.
+ * @param {?} val Variable to test.
+ * @return {boolean} Whether variable is an array.
+ */
+goog.isArray = function(val) {
+  return goog.typeOf(val) == 'array';
 };
 
 
