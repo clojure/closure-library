@@ -1,0 +1,24 @@
+{
+    "source": {
+        "include": ["closure/goog"],
+        "excludePattern": "(_test\\.js$)|(/i18n/(.*symbols(ext)?|.*patterns(ext)?|charpickerdata|currencycodemap)\\.js$)"
+    },
+    "opts": {
+        "recurse": true,
+        "destination": "./out"
+    },
+    "tags": {
+        "allowUnknownTags": true,
+        "dictionaries": ["closure", "jsdoc"]
+    },
+    "templates": {
+        "default": {
+            "useLongnameInNav": true
+        }
+    },
+    "plugins": ["plugins/escapeHtml",
+                "plugins/excludeClosureModules",
+                "plugins/excludeClosureScopes",
+                "plugins/excludeClosureTestOnly",
+                "plugins/excludeClosureLabs"]
+}
