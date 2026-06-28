@@ -18,6 +18,7 @@
     },
     "plugins": ["plugins/escapeHtml",
                 "plugins/excludeClosureModules",
+                "plugins/processClosureNamespaces",
                 "plugins/excludeClosureScopes",
                 "plugins/excludeClosureTestOnly",
                 "plugins/excludeClosureLabs"]
