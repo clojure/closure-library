@@ -1,7 +1,8 @@
 {
     "source": {
         "include": ["closure/goog"],
-        "exclude": ["closure/goog/testing",
+        "exclude": ["closure/goog/debug",
+                    "closure/goog/testing",
                     "closure/goog/demos"],
         "excludePattern": "(_test\\.js$)|(/i18n/(.*symbols(ext)?|.*patterns(ext)?|charpickerdata|currencycodemap)\\.js$)"
     },
